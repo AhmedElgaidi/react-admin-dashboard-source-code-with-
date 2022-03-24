@@ -1,0 +1,78 @@
+.navbar {
+    height: 50px;
+    border-bottom: 0.5px solid rgb(231, 228, 228);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #555;
+
+    .wrapper {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;// to put navbar items left-right
+        width: 100%;// need this to work
+        
+        .search {
+            display: flex;
+            align-items: center;
+            border: 0.5px solid lightgray;
+            border-radius: 10px;
+            // padding: 3px;
+
+            input {
+                border: none; // to  rewmove it's border( we want to leave only the wrapper border).
+                outline: none; // to remove it's border on focus
+                background-color: transparent;// for dark mode later, when we make the .search in black
+                &::placeholder {// for getting attributes
+                    font-size: 18px;
+                    padding-left: 15px;
+                }
+            }
+            
+            .icon {
+                padding-right: 5px;
+            }
+        }
+
+        .items  {
+            display: flex;
+            align-items: center;
+
+            .item {
+                display: flex;
+                align-items: center;
+                margin: 5px;
+                position: relative;
+
+                .icon {
+                    font-size: 30px;
+                }
+                
+                .avatar {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+
+                .counter {
+                    height: 20px !important;
+                    width: 20px !important;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 30px;
+                    width: 30px;
+                    background-color: red;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 11px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                }
+            }
+        }
+    }
+}
